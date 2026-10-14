@@ -1,5 +1,11 @@
 # my-library
 
+**公開URL: https://github.com/Logi-1972/competitive-library**
+
+AtCoderのルールに従い、コンテストで使うテンプレート・ライブラリを公開している。
+本体は非公開の `Logi-1972/atcoder` リポジトリの `my-library/` で、
+公開リポジトリはそのミラー(`git subtree push`で同期)。
+
 自分用に整理する競技プログラミングライブラリ。[kyo-library](https://github.com/Kyo-s-s/Library) と
 [maspypy/library](https://github.com/maspypy/library) から、実際に使う/使いそうな関数を移植したもの。
 
@@ -11,6 +17,7 @@ push権限が無い、または自分の管理下に無いリポジトリ）と�
 
 ```
 my-library/
+├── template/  # 提出に使うC++テンプレート(competitive-env/templates/cpp_template.cpp のコピー)
 ├── kyo/       # kyo-library からの移植(全17ファイル、自己完結)
 │   ├── Data_structure/
 │   ├── Math/
@@ -77,3 +84,16 @@ using namespace std;
 [maspypy/library](https://github.com/maspypy/library) はいずれも明示的なライセンス表記が無いが、
 競技プログラミングのコンテスト提出コードに自由にコピペして使うことを前提に公開されている
 個人ライブラリであり、それに準じた個人利用の範囲で移植している。
+
+移植元: [Kyo-s-s/Library](https://github.com/Kyo-s-s/Library)(`kyo/`)、
+[maspypy/library](https://github.com/maspypy/library)(`maspypy/`)。各ファイルの著作権は移植元の作者に帰属する。
+
+## 公開リポジトリへの同期
+
+`my-library/` や テンプレートを更新したら、`atcoder` にcommitした上で:
+
+```bash
+cp ~/competitive-env/templates/cpp_template.cpp ~/atcoder/my-library/template/  # テンプレを変えた場合(コピー後も先頭に公開URLの行があることを確認)
+cd ~/atcoder
+git subtree push --prefix=my-library https://github.com/Logi-1972/competitive-library.git main
+```
