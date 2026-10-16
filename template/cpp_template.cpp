@@ -1,4 +1,6 @@
 // テンプレート・ライブラリ(公開): https://github.com/Logi-1972/competitive-library
+// 自分用テンプレート。正本は ~/atcoder/my-library/template/cpp_template.cpp で、
+// mkprob / mkcontest / mkfile(~/atcoder/sh/)はここからコピーする。
 //
 // 個人の基礎マクロ集として my-library/maspypy/my_template.hpp を土台にする方針(2026-09-16〜)。
 // my-library は atcoder リポジトリ管理下の自分用ライブラリ(kyo-library/maspypy-libraryから

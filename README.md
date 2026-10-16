@@ -17,7 +17,7 @@ push権限が無い、または自分の管理下に無いリポジトリ）と�
 
 ```
 my-library/
-├── template/  # 提出に使うC++テンプレート(competitive-env/templates/cpp_template.cpp のコピー)
+├── template/  # 自分用C++テンプレート(mkprob等が使う正本。~/atcoder/sh/ 参照)
 ├── kyo/       # kyo-library からの移植(全17ファイル、自己完結)
 │   ├── Data_structure/
 │   ├── Math/
@@ -93,7 +93,6 @@ using namespace std;
 `my-library/` や テンプレートを更新したら、`atcoder` にcommitした上で:
 
 ```bash
-cp ~/competitive-env/templates/cpp_template.cpp ~/atcoder/my-library/template/  # テンプレを変えた場合(コピー後も先頭に公開URLの行があることを確認)
 cd ~/atcoder
 git subtree push --prefix=my-library https://github.com/Logi-1972/competitive-library.git main
 ```
